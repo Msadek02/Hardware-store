@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Hardware</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
+<div class="Header Content">
+   <a class="Header-logoLink" href="index.html">
+   <% if user = current_user %>  
+   <%= link_to 'LogOut', destroy_user_session_path, method: :delete %>
+   <% else %>
+   <%= link_to 'LogIn', new_user_session_path  %>
+   <%= link_to 'SignUp', new_user_registration_path  %>
+   <% end %>
+   <%= link_to 'Hard Ware', root_path %></a>
+</div>
