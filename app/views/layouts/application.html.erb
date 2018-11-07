@@ -14,22 +14,26 @@
                <h4><%= link_to "Hard ware", root_path, id: "logo" %></h4>
             </div>
             <div class="btn-group cart-text text-right">
-              <%= render 'layouts/cart_text' %>
+               <%= render 'layouts/cart_text' %>
             </div>
             <% if current_user.try(:admin?) %>
             <%= link_to 'Manage Products', products_path %>
-            <% end %> 
+            <% end %>
             <% if current_user %>
             <%= link_to 'LogOut', destroy_user_session_path, method: :delete %>
             <% else %>
-            <%= link_to 'LogIn', new_user_session_path  %> Or 
+            <%= link_to 'LogIn', new_user_session_path  %> Or
             <%= link_to 'SignUp', new_user_registration_path  %>
             <% end %>
          </div>
       </header>
       <div class="container">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+         <p class="notice">
+            <%= notice %>
+         </p>
+         <p class="alert">
+            <%= alert %>
+         </p>
          <%= yield %>
       </div>
    </body>
