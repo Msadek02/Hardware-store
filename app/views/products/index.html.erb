@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class='container text-center'>
+<h1>Listing Products</h1><br>
+  <div class="well">
+    <div class="row">
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Condition</th>
+          <th scope="col">Image</th>
+          <th scope="col">Price</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.name %></td>
+            <td><%= product.description %></td>
+            <td><%= product.condition %></td>
+            <td class="pic"><%= image_tag product.image.url %></td>
+            <td><%= product.price %>$</td>
+            <td><%= link_to 'Show', product %></td>
+            <td><%= link_to 'Edit', edit_product_path(product) %></td>
+            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </th>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
+    </div>
+    </div>
+  </div>
+</div>
+
+
