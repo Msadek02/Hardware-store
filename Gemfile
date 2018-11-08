@@ -30,6 +30,8 @@ gem 'devise', '~> 4.2'
 gem 'gravatar_image_tag'
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
+# ruby '2.4.5'
+gem 'rails_12factor'
 
 
 # Use ActiveModel has_secure_password
