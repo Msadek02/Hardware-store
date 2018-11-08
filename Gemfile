@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.3.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
@@ -30,7 +30,6 @@ gem 'devise', '~> 4.2'
 gem 'gravatar_image_tag'
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
-# ruby '2.4.5'
 gem 'rails_12factor'
 
 
